@@ -1,0 +1,22 @@
+.tzelan_check_success{
+	background: url('../images/icon-check.png') no-repeat;
+	background-size: 16px 16px;
+    display: none;
+    float: left;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    width: 16px;
+    height: 16px;
+    margin: 5px 5px 0;
+}
+ .tzelan_spinner{
+	background: url('../images/spinner.gif') no-repeat;
+	background-size: 16px 16px;
+	display: none;
+	float: left;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	width: 16px;
+	height: 16px;
+	margin: 5px 5px 0;
+ }
