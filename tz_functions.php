@@ -17,9 +17,8 @@ function delete_metabox( $metaboxid ) {
 	global $wpdb;
 
 	$wpdb->delete(
-		"{$wpdb->prefix}".TZELAN_TBL,
-		[ 'metaboxid' => $metaboxid ],
-		[ '%d' ]
+		"{$wpdb->prefix}".TZELAN_TBL,array('metaboxid' => $metaboxid ),
+		array( '%d' )
 	);
 }
 
