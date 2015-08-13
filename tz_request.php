@@ -35,6 +35,12 @@ function handle_meta_box_add() {
 			$wpdb->insert( $table_name, array( 'metaboxid' => $unique, 'title' => $title, 'content' => $text[$key] ) );
 		}
 	}
+
+	$current_url = $_SERVER["REQUEST_URI"];
+	$redir_url = add_query_arg( array(
+	    'updated' => '1'
+	), $current_url );
+	header("Location: ". $redir_url );
 }
 
 function handle_meta_box_update() {
@@ -50,6 +56,12 @@ function handle_meta_box_update() {
 			$wpdb->insert( $table_name, array( 'metaboxid' => $metaboxid, 'title' => $title, 'content' => $text[$key] ) );
 		}
 	}
+
+	$current_url = $_SERVER["REQUEST_URI"];
+	$redir_url = add_query_arg( array(
+	    'updated' => '1'
+	), $current_url );
+	header("Location: ". $redir_url );
 }
 
 function random_id( $len=5 ) {

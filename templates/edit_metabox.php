@@ -5,8 +5,11 @@ if( !$metaboxes ){
     return;
 }
 ?>
+<?php if(isset($_GET['updated']) && $_GET['updated'] == 1): ?>
+<div id="message" class="updated"><p>Metabox has been updated Successfully</p></div>
+<?php endif; ?>
 <div class="wrap">
-    <h1>Meta Box #<?= $_REQUEST['metabox'] ?></h1>
+    <h1>Meta Box #<?= $_REQUEST['metabox'] ?> <a href="?page=<?= $_REQUEST['page'] ?>" class="button">Go back</a></h1>
     <form action="" method="post">
     <input type="submit" class="button-primary" name="metabox_form_update" value="Update" />
     <input type="hidden" name="metabox_id" value="<?= $_REQUEST['metabox']; ?>" />
